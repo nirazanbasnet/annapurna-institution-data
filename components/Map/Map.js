@@ -19,6 +19,31 @@ const institution = [
 		name: "वडा कार्यालय",
 		value: "वडा कार्यालय",
 	},
+	{
+		id: 4,
+		name: "व्यापारिक केन्द्र",
+		value: "व्यापारिक केन्द्र",
+	},
+	{
+		id: 5,
+		name: "स्वास्थ्य सेवा",
+		value: "स्वास्थ्य सेवा",
+	},
+	{
+		id: 6,
+		name: "बैंक",
+		value: "बैंक",
+	},
+	{
+		id: 7,
+		name: "धार्मिक स्थल",
+		value: "धार्मिक स्थल",
+	},
+	{
+		id: 8,
+		name: "सुरक्षा इकाई",
+		value: "सुरक्षा इकाई",
+	},
 ];
 
 export default function Map() {
@@ -86,8 +111,8 @@ export default function Map() {
 
 			{/* Leaflet Map */}
 			<MapContainer
-				center={[28.394857, 84.124008]}
-				zoom={10}
+				center={[28.29268262, 83.8238525]}
+				zoom={12}
 				scrollWheelZoom={false}
 			>
 				<TileLayer
