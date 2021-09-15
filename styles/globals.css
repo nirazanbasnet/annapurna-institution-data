@@ -715,11 +715,15 @@ header h2 {
 	color: #fff;
 }
 
-.top-bar span {
+.top-bar .checkbox-content {
+	margin-top: 16px;
+}
+
+.top-bar .checkbox-content span {
 	margin-bottom: 16px;
 	display: block;
 	font-size: 14px;
-	padding: 4px 8px;
+	padding: 4px 0;
 	cursor: pointer;
 	height: 30px;
 	display: flex;
@@ -727,7 +731,7 @@ header h2 {
 	position: relative;
 }
 
-.top-bar span:before {
+.top-bar .checkbox-content span:before {
 	content: "";
 	width: 16px;
 	height: 16px;
@@ -737,12 +741,12 @@ header h2 {
 	border-radius: 2px;
 }
 
-.top-bar span.active:before {
+.top-bar .checkbox-content span.active:before {
 	background: #3583e6;
 	border-color: #3583e6;
 }
 
-.top-bar span.active:after {
+.top-bar .checkbox-content span.active:after {
 	content: "";
 	position: absolute;
 	left: 14px;
@@ -754,6 +758,42 @@ header h2 {
 	transform: rotate(45deg);
 }
 
-.top-bar span:last-child {
+.top-bar .checkbox-content span:last-child {
 	margin-bottom: 0;
+}
+
+.flex {
+	display: flex;
+}
+
+.item-center {
+	align-items: center;
+}
+
+.flex-wrap {
+	flex-wrap: wrap;
+}
+
+.mr-2 {
+	margin-right: 8px;
+}
+
+.mb-2 {
+	margin-bottom: 8px;
+}
+
+.inline-block {
+	display: inline-block;
+}
+
+select {
+	appearance: none;
+	width: 100%;
+	background: transparent;
+	border: 1px solid #fff;
+	color: #fff;
+	padding: 8px 10px;
+	border-radius: 4px;
+	outline: none;
+	cursor: pointer;
 }

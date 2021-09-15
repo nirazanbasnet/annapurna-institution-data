@@ -48,19 +48,35 @@ const institution = [
 
 export default function Map() {
 	const [selected, setSelected] = useState([]);
+	const [wardSelected, setWardSelected] = useState("All");
 	const [dataItem, setDataItem] = useState(data);
 
 	useEffect(() => {
-		if (selected.length === 0 || selected.includes("All")) {
-			setDataItem(data);
-		} else {
-			const filteredData = data.filter((item) => selected.includes(item.type));
-			setDataItem(filteredData);
+		filter(selected, wardSelected);
+	}, [selected, wardSelected]);
+
+	const onChangeWard = (e) => {
+		setWardSelected(e.target.value);
+	};
+
+	const filter = (selectedType, selectedWard) => {
+		let filtered = data;
+
+		if (selectedType.length && !selectedType.includes("All")) {
+			filtered = filtered.filter((item) => selectedType.includes(item.type));
 		}
-	}, [selected]);
+
+		if (selectedWard !== "All") {
+			filtered = filtered.filter(
+				(item) => parseInt(selectedWard) === item.ward
+			);
+		}
+
+		setDataItem(filtered);
+	};
 
 	//Filter Function
-	const filter = (button) => {
+	const handleTypeSelection = (button) => {
 		if (button === "All" && !selected.includes("All")) {
 			return setSelected(["All"]);
 		}
@@ -92,21 +108,41 @@ export default function Map() {
 		<div className="main-content">
 			{/* Filter section */}
 			<div className="top-bar">
-				<span
-					onClick={() => filter("All")}
-					className={isActiveClass("All") ? "active" : ""}
-				>
-					All
-				</span>
-				{institution.map((value, index) => (
-					<span
-						key={index}
-						onClick={() => filter(value.name)}
-						className={isActiveClass(value.name) ? "active" : ""}
+				<div className="flex item-center flex-wrap">
+					<span className="mb-2 inline-block">वार्ड छनौट गर्नुहोस्</span>
+
+					<select
+						name="ward_select"
+						id="ward_select"
+						value={wardSelected}
+						onChange={onChangeWard}
 					>
-						{value.name}
+						<option value="All">All</option>
+						{[...Array(10)].map((ward, index) => (
+							<option key={index + 1} value={index + 1}>
+								{index + 1}
+							</option>
+						))}
+					</select>
+				</div>
+
+				<div className="checkbox-content">
+					<span
+						onClick={() => handleTypeSelection("All")}
+						className={isActiveClass("All") ? "active" : ""}
+					>
+						All
 					</span>
-				))}
+					{institution.map((value, index) => (
+						<span
+							key={index}
+							onClick={() => handleTypeSelection(value.name)}
+							className={isActiveClass(value.name) ? "active" : ""}
+						>
+							{value.name}
+						</span>
+					))}
+				</div>
 			</div>
 
 			{/* Leaflet Map */}
