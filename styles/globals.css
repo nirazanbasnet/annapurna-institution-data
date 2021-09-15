@@ -749,7 +749,7 @@ header h2 {
 .top-bar .checkbox-content span.active:after {
 	content: "";
 	position: absolute;
-	left: 14px;
+	left: 7px;
 	top: 7px;
 	width: 4px;
 	height: 10px;
