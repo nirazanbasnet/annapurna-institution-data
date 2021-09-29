@@ -4,307 +4,351 @@
 		"ward": 1,
 		"lat": "28.28151644",
 		"long": "83.86877848",
-		"type": "पर्यटकिय स्थल"
+		"type": "पर्यटकिय स्थल",
+		"marker_icon": "https://res.cloudinary.com/haami/image/upload/v1632937658/map_markers/tourism_marker_h8gtrc.png"
 	},
 	{
 		"name": "ढिकुरपोखरी",
 		"ward": 2,
 		"lat": "28.2830870603446",
 		"long": "83.856654124082",
-		"type": "पर्यटकिय स्थल"
+		"type": "पर्यटकिय स्थल",
+		"marker_icon": "https://res.cloudinary.com/haami/image/upload/v1632937658/map_markers/tourism_marker_h8gtrc.png"
 	},
 	{
 		"name": "अस्ट्रेलियन बेस क्याप",
 		"ward": 3,
 		"lat": "28.3044996355955",
 		"long": "83.8282872303164",
-		"type": "पर्यटकिय स्थल"
+		"type": "पर्यटकिय स्थल",
+		"marker_icon": "https://res.cloudinary.com/haami/image/upload/v1632937658/map_markers/tourism_marker_h8gtrc.png"
 	},
 	{
 		"name": "काडें",
 		"ward": 3,
 		"lat": "28.29268262",
 		"long": "83.8238525",
-		"type": "पर्यटकिय स्थल"
+		"type": "पर्यटकिय स्थल",
+		"marker_icon": "https://res.cloudinary.com/haami/image/upload/v1632937658/map_markers/tourism_marker_h8gtrc.png"
 	},
 	{
 		"name": "भदौरे",
 		"ward": 4,
 		"lat": "28.26387263",
 		"long": "83.82037198",
-		"type": "पर्यटकिय स्थल"
+		"type": "पर्यटकिय स्थल",
+		"marker_icon": "https://res.cloudinary.com/haami/image/upload/v1632937658/map_markers/tourism_marker_h8gtrc.png"
 	},
 	{
 		"name": "सल्यान",
 		"ward": 4,
 		"lat": "28.27894778",
 		"long": "83.79526374",
-		"type": "पर्यटकिय स्थल"
+		"type": "पर्यटकिय स्थल",
+		"marker_icon": "https://res.cloudinary.com/haami/image/upload/v1632937658/map_markers/tourism_marker_h8gtrc.png"
 	},
 	{
 		"name": "पाउदुर कोट",
 		"ward": 3,
 		"lat": "28.28859013",
 		"long": "83.82801522",
-		"type": "पर्यटकिय स्थल"
+		"type": "पर्यटकिय स्थल",
+		"marker_icon": "https://res.cloudinary.com/haami/image/upload/v1632937658/map_markers/tourism_marker_h8gtrc.png"
 	},
 	{
 		"name": "लुम्ले",
 		"ward": 6,
 		"lat": "28.3006374",
 		"long": "83.79937896",
-		"type": "पर्यटकिय स्थल"
+		"type": "पर्यटकिय स्थल",
+		"marker_icon": "https://res.cloudinary.com/haami/image/upload/v1632937658/map_markers/tourism_marker_h8gtrc.png"
 	},
 	{
 		"name": "दाङसिङ",
 		"ward": 8,
 		"lat": "28.32804782",
 		"long": "83.77497393",
-		"type": "पर्यटकिय स्थल"
+		"type": "पर्यटकिय स्थल",
+		"marker_icon": "https://res.cloudinary.com/haami/image/upload/v1632937658/map_markers/tourism_marker_h8gtrc.png"
 	},
 	{
 		"name": "मोहरीया",
 		"ward": 8,
 		"lat": "28.33352991",
 		"long": "83.78305225",
-		"type": "पर्यटकिय स्थल"
+		"type": "पर्यटकिय स्थल",
+		"marker_icon": "https://res.cloudinary.com/haami/image/upload/v1632937658/map_markers/tourism_marker_h8gtrc.png"
 	},
 	{
 		"name": "लहरी आ वि",
 		"ward": 1,
 		"lat": "28.275638",
 		"long": "83.883833",
-		"type": "शैक्षिक"
+		"type": "शैक्षिक",
+		"marker_icon": "https://res.cloudinary.com/haami/image/upload/v1632936915/map_markers/education_marker_b7uqcm.png"
 	},
 	{
 		"name": "महेन्द्र आ वि",
 		"ward": 1,
 		"lat": "28.281709",
 		"long": "83.878627",
-		"type": "शैक्षिक"
+		"type": "शैक्षिक",
+		"marker_icon": "https://res.cloudinary.com/haami/image/upload/v1632936915/map_markers/education_marker_b7uqcm.png"
 	},
 	{
 		"name": "परस् आ वि",
 		"ward": 1,
 		"lat": "28.269089",
 		"long": "83.864246",
-		"type": "शैक्षिक"
+		"type": "शैक्षिक",
+		"marker_icon": "https://res.cloudinary.com/haami/image/upload/v1632936915/map_markers/education_marker_b7uqcm.png"
 	},
 	{
 		"name": "सिर्जना मा वि",
 		"ward": 1,
 		"lat": "28.278615",
 		"long": "83.874275",
-		"type": "शैक्षिक"
+		"type": "शैक्षिक",
+		"marker_icon": "https://res.cloudinary.com/haami/image/upload/v1632936915/map_markers/education_marker_b7uqcm.png"
 	},
 	{
 		"name": "सरस्वति आ वि",
 		"ward": 2,
 		"lat": "28.26081",
 		"long": "83.857428",
-		"type": "शैक्षिक"
+		"type": "शैक्षिक",
+		"marker_icon": "https://res.cloudinary.com/haami/image/upload/v1632936915/map_markers/education_marker_b7uqcm.png"
 	},
 	{
 		"name": "दुर्गा भवानी आदर्श आ वि",
 		"ward": 2,
 		"lat": "28.274584",
 		"long": "83.857337",
-		"type": "शैक्षिक"
+		"type": "शैक्षिक",
+		"marker_icon": "https://res.cloudinary.com/haami/image/upload/v1632936915/map_markers/education_marker_b7uqcm.png"
 	},
 	{
 		"name": "माछापुच्छ्रे मा वि",
 		"ward": 2,
 		"lat": "28.283869",
 		"long": "83.852861",
-		"type": "शैक्षिक"
+		"type": "शैक्षिक",
+		"marker_icon": "https://res.cloudinary.com/haami/image/upload/v1632936915/map_markers/education_marker_b7uqcm.png"
 	},
 	{
 		"name": "पाँउदुर आ वि",
 		"ward": 3,
 		"lat": "28.289189",
 		"long": "83.832378",
-		"type": "शैक्षिक"
+		"type": "शैक्षिक",
+		"marker_icon": "https://res.cloudinary.com/haami/image/upload/v1632936915/map_markers/education_marker_b7uqcm.png"
 	},
 	{
 		"name": "",
 		"ward": 1,
 		"lat": "28.2827400858663",
 		"long": "83.8558267012135",
-		"type": "वडा कार्यालय"
+		"type": "वडा कार्यालय",
+		"marker_icon": "https://res.cloudinary.com/haami/image/upload/v1632937576/map_markers/ward_office_marker_hvup18.png"
 	},
 	{
 		"name": "",
 		"ward": 2,
 		"lat": "28.282845",
 		"long": "83.856196",
-		"type": "वडा कार्यालय"
+		"type": "वडा कार्यालय",
+		"marker_icon": "https://res.cloudinary.com/haami/image/upload/v1632937576/map_markers/ward_office_marker_hvup18.png"
 	},
 	{
 		"name": "",
 		"ward": 3,
 		"lat": "28.287104",
 		"long": "83.837464",
-		"type": "वडा कार्यालय"
+		"type": "वडा कार्यालय",
+		"marker_icon": "https://res.cloudinary.com/haami/image/upload/v1632937576/map_markers/ward_office_marker_hvup18.png"
 	},
 	{
 		"name": "",
 		"ward": 4,
 		"lat": "28.2741949",
 		"long": "83.79281027",
-		"type": "वडा कार्यालय"
+		"type": "वडा कार्यालय",
+		"marker_icon": "https://res.cloudinary.com/haami/image/upload/v1632937576/map_markers/ward_office_marker_hvup18.png"
 	},
 	{
 		"name": "नौडाडा",
 		"ward": 1,
 		"lat": "28.28161236",
 		"long": "83.8664139",
-		"type": "व्यापारिक केन्द्र"
+		"type": "व्यापारिक केन्द्र",
+		"marker_icon": "https://res.cloudinary.com/haami/image/upload/v1632937908/map_markers/business_marker_l2szhp.png"
 	},
 	{
 		"name": "काडें",
 		"ward": 3,
 		"lat": "28.2926235",
 		"long": "83.8238252",
-		"type": "व्यापारिक केन्द्र"
+		"type": "व्यापारिक केन्द्र",
+		"marker_icon": "https://res.cloudinary.com/haami/image/upload/v1632937908/map_markers/business_marker_l2szhp.png"
 	},
 	{
 		"name": "ढिकुरपोखरी",
 		"ward": 2,
 		"lat": "28.28308628",
 		"long": "83.85664315",
-		"type": "व्यापारिक केन्द्र"
+		"type": "व्यापारिक केन्द्र",
+		"marker_icon": "https://res.cloudinary.com/haami/image/upload/v1632937908/map_markers/business_marker_l2szhp.png"
 	},
 	{
 		"name": "भदौरे",
 		"ward": 4,
 		"lat": "28.26396275",
 		"long": "83.8202903",
-		"type": "व्यापारिक केन्द्र"
+		"type": "व्यापारिक केन्द्र",
+		"marker_icon": "https://res.cloudinary.com/haami/image/upload/v1632937908/map_markers/business_marker_l2szhp.png"
 	},
 	{
 		"name": "लुम्ले घुम्ती",
 		"ward": 6,
 		"lat": "28.29988058",
 		"long": "83.79650345",
-		"type": "व्यापारिक केन्द्र"
+		"type": "व्यापारिक केन्द्र",
+		"marker_icon": "https://res.cloudinary.com/haami/image/upload/v1632937908/map_markers/business_marker_l2szhp.png"
 	},
 	{
 		"name": "झोवाङ",
 		"ward": 5,
 		"lat": "28.29262799",
 		"long": "83.77069096",
-		"type": "व्यापारिक केन्द्र"
+		"type": "व्यापारिक केन्द्र",
+		"marker_icon": "https://res.cloudinary.com/haami/image/upload/v1632937908/map_markers/business_marker_l2szhp.png"
 	},
 	{
 		"name": "नयाँपुल",
 		"ward": 5,
 		"lat": "28.29853574",
 		"long": "83.76803105",
-		"type": "व्यापारिक केन्द्र"
+		"type": "व्यापारिक केन्द्र",
+		"marker_icon": "https://res.cloudinary.com/haami/image/upload/v1632937908/map_markers/business_marker_l2szhp.png"
 	},
 	{
 		"name": "आधारभुत स्वास्थ्य सेवा केन्द्र",
 		"ward": 1,
 		"lat": "28.278787",
 		"long": "83.87649",
-		"type": "स्वास्थ्य सेवा"
+		"type": "स्वास्थ्य सेवा",
+		"marker_icon": "https://res.cloudinary.com/haami/image/upload/v1632937415/map_markers/health_marker_pruvii.png"
 	},
 	{
 		"name": "नौडाडाँ स्वास्थ्य चौकी",
 		"ward": 2,
 		"lat": "28.282531",
 		"long": "83.856821",
-		"type": "स्वास्थ्य सेवा"
+		"type": "स्वास्थ्य सेवा",
+		"marker_icon": "https://res.cloudinary.com/haami/image/upload/v1632937415/map_markers/health_marker_pruvii.png"
 	},
 	{
 		"name": "आधारभुत स्वास्थ्य सेवा केन्द्र",
 		"ward": 3,
 		"lat": "28.287054",
 		"long": "83.837288",
-		"type": "स्वास्थ्य सेवा"
+		"type": "स्वास्थ्य सेवा",
+		"marker_icon": "https://res.cloudinary.com/haami/image/upload/v1632937415/map_markers/health_marker_pruvii.png"
 	},
 	{
 		"name": "सल्यान स्वास्थ्य चौकी",
 		"ward": 4,
 		"lat": "28.28193379",
 		"long": "83.78522321",
-		"type": "स्वास्थ्य सेवा"
+		"type": "स्वास्थ्य सेवा",
+		"marker_icon": "https://res.cloudinary.com/haami/image/upload/v1632937415/map_markers/health_marker_pruvii.png"
 	},
 	{
 		"name": "झोवाङ सामुदायिक स्वास्थ्य इकाई",
 		"ward": 5,
 		"lat": "28.292905",
 		"long": "83.770458",
-		"type": "स्वास्थ्य सेवा"
+		"type": "स्वास्थ्य सेवा",
+		"marker_icon": "https://res.cloudinary.com/haami/image/upload/v1632937415/map_markers/health_marker_pruvii.png"
 	},
 	{
 		"name": "लुम्ले आयुवेदिक औषधालय",
 		"ward": 6,
 		"lat": "28.296566",
 		"long": "83.806752",
-		"type": "स्वास्थ्य सेवा"
+		"type": "स्वास्थ्य सेवा",
+		"marker_icon": "https://res.cloudinary.com/haami/image/upload/v1632937415/map_markers/health_marker_pruvii.png"
 	},
 	{
 		"name": "लुम्ले स्वास्थ्य चौकी",
 		"ward": 7,
 		"lat": "28.315761",
 		"long": "83.801815",
-		"type": "स्वास्थ्य सेवा"
+		"type": "स्वास्थ्य सेवा",
+		"marker_icon": "https://res.cloudinary.com/haami/image/upload/v1632937415/map_markers/health_marker_pruvii.png"
 	},
 	{
 		"name": "NIC ASIA BANK",
 		"ward": 1,
 		"lat": "28.28144355",
 		"long": "83.86733063",
-		"type": "बैंक"
+		"type": "बैंक",
+		"marker_icon": "https://res.cloudinary.com/haami/image/upload/v1632938110/map_markers/bank_marker_chg0tx.png"
 	},
 	{
 		"name": "NMB BANK",
 		"ward": 2,
 		"lat": "28.28158173",
 		"long": "83.86629463",
-		"type": "बैंक"
+		"type": "बैंक",
+		"marker_icon": "https://res.cloudinary.com/haami/image/upload/v1632938110/map_markers/bank_marker_chg0tx.png"
 	},
 	{
 		"name": "MUKTINATH BIKAS BANK",
 		"ward": 3,
 		"lat": "28.29947986",
 		"long": "83.7688026",
-		"type": "बैंक"
+		"type": "बैंक",
+		"marker_icon": "https://res.cloudinary.com/haami/image/upload/v1632938110/map_markers/bank_marker_chg0tx.png"
 	},
 	{
 		"name": "NIC ASIA BANK",
 		"ward": 4,
 		"lat": "28.29922251",
 		"long": "83.76826086",
-		"type": "बैंक"
+		"type": "बैंक",
+		"marker_icon": "https://res.cloudinary.com/haami/image/upload/v1632938110/map_markers/bank_marker_chg0tx.png"
 	},
 	{
 		"name": "POKHARA FINANCE",
 		"ward": 5,
 		"lat": "28.29783789",
 		"long": "83.76761893",
-		"type": "बैंक"
+		"type": "बैंक",
+		"marker_icon": "https://res.cloudinary.com/haami/image/upload/v1632938110/map_markers/bank_marker_chg0tx.png"
 	},
 	{
 		"name": "PRABHU BANK",
 		"ward": 6,
 		"lat": "28.30858731",
 		"long": "83.77463165",
-		"type": "बैंक"
+		"type": "बैंक",
+		"marker_icon": "https://res.cloudinary.com/haami/image/upload/v1632938110/map_markers/bank_marker_chg0tx.png"
 	},
 	{
 		"name": "नागडाडा प्रहरी चौकी",
 		"ward": 1,
 		"lat": "28.281644",
 		"long": "83.864017",
-		"type": "सुरक्षा इकाई"
+		"type": "सुरक्षा इकाई",
+		"marker_icon": "https://res.cloudinary.com/haami/image/upload/v1632938325/map_markers/security_marker_pibiaf.png"
 	},
 	{
 		"name": "नयाँपुल प्रहरी चौकी",
 		"ward": 5,
 		"lat": "28.29750172",
 		"long": "83.76740566",
-		"type": "सुरक्षा इकाई"
+		"type": "सुरक्षा इकाई",
+		"marker_icon": "https://res.cloudinary.com/haami/image/upload/v1632938325/map_markers/security_marker_pibiaf.png"
 	}
 ]

@@ -1,7 +1,14 @@
 import React, { useState, useEffect } from "react";
-import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
+import {
+	MapContainer,
+	TileLayer,
+	Popup,
+	Tooltip,
+	Marker,
+	LayersControl,
+} from "react-leaflet";
+import L from "leaflet";
 import data from "./map_data.json";
-
 // Institution Filter Item
 const institution = [
 	{
@@ -104,6 +111,12 @@ export default function Map() {
 		return selected.includes(type);
 	};
 
+	const center = [51.505, -0.09];
+	const rectangle = [
+		[51.49, -0.08],
+		[51.5, -0.06],
+	];
+
 	return (
 		<div className="main-content">
 			{/* Filter section */}
@@ -146,26 +159,48 @@ export default function Map() {
 			</div>
 
 			{/* Leaflet Map */}
-			<MapContainer
-				center={[28.29268262, 83.8238525]}
-				zoom={12}
-				scrollWheelZoom={false}
-			>
-				<TileLayer
-					attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
-					url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-				/>
+			<MapContainer center={[28.29268262, 83.8238525]} zoom={12}>
+				<LayersControl position="bottomright">
+					<LayersControl.BaseLayer checked name="OSM">
+						<TileLayer
+							attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+							url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+						/>
+					</LayersControl.BaseLayer>
+					<LayersControl.BaseLayer name="Satellite View">
+						<TileLayer
+							attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+							url="http://{s}.mqcdn.com/tiles/1.0.0/sat/{z}/{x}/{y}.png"
+							subdomains={["otile1", "otile2", "otile3", "otile4"]}
+						/>
+					</LayersControl.BaseLayer>
+				</LayersControl>
 
-				{dataItem.map((list, index) => (
-					<Marker key={index} position={[list.lat, list.long]}>
-						<Popup>
-							<div>
-								<h2>{list.name}</h2>
-								<p>Ward no: {list.ward}</p>
-							</div>
-						</Popup>
-					</Marker>
-				))}
+				{dataItem.map((list, index) => {
+					const icon = new L.Icon({
+						iconUrl: list.marker_icon,
+						iconSize: [32, 32],						
+					});
+
+					return (
+						<Marker key={index} position={[list.lat, list.long]} icon={icon}>
+							<Popup>
+								<div>
+									<h2>{list.name}</h2>
+									<p>वार्ड नं: <strong>{list.ward}</strong></p>
+									<p>प्रकार: <strong>{list.type}</strong></p>
+								</div>
+							</Popup>
+							<Tooltip>
+								<div>
+									<h2>{list.name}</h2>
+									<p>वार्ड नं: <strong>{list.ward}</strong></p>
+									<p>प्रकार: <strong>{list.type}</strong></p>
+								</div>
+							</Tooltip>
+						</Marker>
+					);
+				})}
 			</MapContainer>
 		</div>
 	);
