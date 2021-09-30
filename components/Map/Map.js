@@ -10,8 +10,9 @@ import {
 	GeoJSON,
 } from "react-leaflet";
 import L from "leaflet";
-import data from "./map_data.json";
-import geojson_data from "./annapurna";
+import data from "./annapurna_poi.json";
+import geojson_data from "./annapurna_geojson";
+
 // Institution Filter Item
 const institution = [
 	{
