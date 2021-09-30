@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import React, { useState, useEffect } from "react";
 import {
 	MapContainer,
@@ -6,50 +7,60 @@ import {
 	Tooltip,
 	Marker,
 	LayersControl,
+	GeoJSON,
 } from "react-leaflet";
 import L from "leaflet";
 import data from "./map_data.json";
+import geojson_data from "./annapurna";
 // Institution Filter Item
 const institution = [
 	{
 		id: 1,
 		name: "पर्यटकिय स्थल",
 		value: "पर्यटकिय स्थल",
+		icon: "https://res.cloudinary.com/haami/image/upload/v1632937658/map_markers/tourism_marker_h8gtrc.png",
 	},
 	{
 		id: 2,
 		name: "शैक्षिक",
 		value: "शैक्षिक",
+		icon: "https://res.cloudinary.com/haami/image/upload/v1632936915/map_markers/education_marker_b7uqcm.png",
 	},
 	{
 		id: 3,
 		name: "वडा कार्यालय",
 		value: "वडा कार्यालय",
+		icon: "https://res.cloudinary.com/haami/image/upload/v1632937576/map_markers/ward_office_marker_hvup18.png",
 	},
 	{
 		id: 4,
 		name: "व्यापारिक केन्द्र",
 		value: "व्यापारिक केन्द्र",
+		icon: "https://res.cloudinary.com/haami/image/upload/v1632937908/map_markers/business_marker_l2szhp.png",
 	},
 	{
 		id: 5,
 		name: "स्वास्थ्य सेवा",
 		value: "स्वास्थ्य सेवा",
+		icon: "https://res.cloudinary.com/haami/image/upload/v1632937415/map_markers/health_marker_pruvii.png",
 	},
 	{
 		id: 6,
 		name: "बैंक",
 		value: "बैंक",
+		icon: "https://res.cloudinary.com/haami/image/upload/v1632938110/map_markers/bank_marker_chg0tx.png",
 	},
 	{
 		id: 7,
 		name: "धार्मिक स्थल",
 		value: "धार्मिक स्थल",
+		icon: "https://res.cloudinary.com/haami/image/upload/v1632938208/map_markers/religious_marker_yjcgvr.png",
 	},
 	{
 		id: 8,
 		name: "सुरक्षा इकाई",
 		value: "सुरक्षा इकाई",
+		icon: "https://res.cloudinary.com/haami/image/upload/v1632938325/map_markers/security_marker_pibiaf.png",
 	},
 ];
 
@@ -111,12 +122,6 @@ export default function Map() {
 		return selected.includes(type);
 	};
 
-	const center = [51.505, -0.09];
-	const rectangle = [
-		[51.49, -0.08],
-		[51.5, -0.06],
-	];
-
 	return (
 		<div className="main-content">
 			{/* Filter section */}
@@ -152,6 +157,12 @@ export default function Map() {
 							onClick={() => handleTypeSelection(value.name)}
 							className={isActiveClass(value.name) ? "active" : ""}
 						>
+							<img
+								className="mr-2"
+								style={{ height: 24 }}
+								src={value.icon}
+								alt={value.name}
+							/>
 							{value.name}
 						</span>
 					))}
@@ -159,7 +170,12 @@ export default function Map() {
 			</div>
 
 			{/* Leaflet Map */}
-			<MapContainer center={[28.29268262, 83.8238525]} zoom={12}>
+			<MapContainer center={[28.4208056, 83.8102555]} zoom={11}>
+				<GeoJSON
+					attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+					data={geojson_data}
+				/>
+
 				<LayersControl position="bottomright">
 					<LayersControl.BaseLayer checked name="OSM">
 						<TileLayer
@@ -179,7 +195,10 @@ export default function Map() {
 				{dataItem.map((list, index) => {
 					const icon = new L.Icon({
 						iconUrl: list.marker_icon,
-						iconSize: [32, 32],						
+						iconSize: [32, 32],
+						shadowUrl: null,
+						shadowSize: null,
+						shadowAnchor: null,
 					});
 
 					return (
@@ -187,15 +206,23 @@ export default function Map() {
 							<Popup>
 								<div>
 									<h2>{list.name}</h2>
-									<p>वार्ड नं: <strong>{list.ward}</strong></p>
-									<p>प्रकार: <strong>{list.type}</strong></p>
+									<p>
+										वार्ड नं: <strong>{list.ward}</strong>
+									</p>
+									<p>
+										प्रकार: <strong>{list.type}</strong>
+									</p>
 								</div>
 							</Popup>
 							<Tooltip>
 								<div>
 									<h2>{list.name}</h2>
-									<p>वार्ड नं: <strong>{list.ward}</strong></p>
-									<p>प्रकार: <strong>{list.type}</strong></p>
+									<p>
+										वार्ड नं: <strong>{list.ward}</strong>
+									</p>
+									<p>
+										प्रकार: <strong>{list.type}</strong>
+									</p>
 								</div>
 							</Tooltip>
 						</Marker>
