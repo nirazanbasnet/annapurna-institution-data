@@ -719,7 +719,7 @@ header h2 {
 	margin-top: 16px;
 }
 
-.top-bar .checkbox-content span {
+.top-bar .checkbox-content > span {
 	margin-bottom: 16px;
 	display: block;
 	font-size: 14px;
@@ -731,7 +731,7 @@ header h2 {
 	position: relative;
 }
 
-.top-bar .checkbox-content span:before {
+.top-bar .checkbox-content > span:before {
 	content: "";
 	width: 16px;
 	height: 16px;
@@ -741,21 +741,18 @@ header h2 {
 	border-radius: 2px;
 }
 
-.top-bar .checkbox-content span.active:before {
+.top-bar .checkbox-content > span.active:before {
 	background: #3583e6;
 	border-color: #3583e6;
 }
 
-.top-bar .checkbox-content span.active:after {
-	content: "";
+.top-bar .checkbox-content > span.active:after {
+	content: "\2713";
 	position: absolute;
-	left: 7px;
-	top: 7px;
-	width: 4px;
-	height: 10px;
-	border: solid white;
-	border-width: 0 2px 2px 0;
-	transform: rotate(45deg);
+	left: 2px;
+	top: 3px;
+	font-size: 14px;
+	font-weight: bold;
 }
 
 .top-bar .checkbox-content span:last-child {
@@ -795,5 +792,9 @@ select {
 	padding: 8px 10px;
 	border-radius: 4px;
 	outline: none;
+	cursor: pointer;
+}
+
+.cursor-pointer {
 	cursor: pointer;
 }

@@ -10,8 +10,10 @@ import {
 	GeoJSON,
 } from "react-leaflet";
 import L from "leaflet";
-import data from "./annapurna_poi.json";
-import geojson_data from "./annapurna_geojson";
+import data from "./data/annapurna_poi.json";
+import geojson_data from "./geojson_data/annapurna_geojson";
+import ringroad_geojson_data from "./geojson_data/annapurna_ringroad";
+import trekking_geojson_data from "./geojson_data/annapurna_trekking";
 
 // Institution Filter Item
 const institution = [
@@ -69,6 +71,8 @@ export default function Map() {
 	const [selected, setSelected] = useState([]);
 	const [wardSelected, setWardSelected] = useState("All");
 	const [dataItem, setDataItem] = useState(data);
+	const [trekkingSelected, setTrekkingSelected] = useState(false);
+	const [ringRoadSelected, setRingRoadSelected] = useState(false);
 
 	useEffect(() => {
 		filter(selected, wardSelected);
@@ -123,11 +127,66 @@ export default function Map() {
 		return selected.includes(type);
 	};
 
+	const trekkingPolyStyle = (feature) => {
+		return {
+			color: "yellow", //Outline color
+		};
+	};
+
+	const ringRoadPolyStyle = (feature) => {
+		return {
+			color: "red", //Outline color
+		};
+	};
+
+	const handleToggleTrekking = () => {
+		setTrekkingSelected(!trekkingSelected);
+	};
+
+	const handleToggleRingRoad = () => {
+		setRingRoadSelected(!ringRoadSelected);
+	};
+
 	return (
 		<div className="main-content">
 			{/* Filter section */}
 			<div className="top-bar">
 				<div className="flex item-center flex-wrap">
+					<div className="mb-8">
+						<span>नक्शा मार्ग</span>
+						<div className="checkbox-content">
+							<span
+								onClick={handleToggleTrekking}
+								className={
+									trekkingSelected ? "active cursor-pointer" : "cursor-pointer"
+								}
+							>
+								<span className="w-16">पदयात्रा मार्ग</span>
+								<i
+									className="inlne-block ml-3 w-5"
+									style={{
+										background: "yellow",
+										height: "2px",
+									}}
+								></i>
+							</span>
+							<span
+								onClick={handleToggleRingRoad}
+								className={
+									ringRoadSelected ? "active cursor-pointer" : "cursor-pointer"
+								}
+							>
+								<span className="w-16">रिंगरोड मार्ग</span>
+								<i
+									className="inlne-block ml-3 w-5"
+									style={{
+										background: "red",
+										height: "2px",
+									}}
+								></i>
+							</span>
+						</div>
+					</div>
 					<span className="mb-2 inline-block">वार्ड छनौट गर्नुहोस्</span>
 
 					<select
@@ -177,6 +236,26 @@ export default function Map() {
 					data={geojson_data}
 				/>
 
+				{ringRoadSelected ? (
+					<GeoJSON
+						attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+						data={ringroad_geojson_data}
+						style={ringRoadPolyStyle}
+					/>
+				) : (
+					""
+				)}
+
+				{trekkingSelected ? (
+					<GeoJSON
+						attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+						data={trekking_geojson_data}
+						style={trekkingPolyStyle}
+					/>
+				) : (
+					""
+				)}
+
 				<LayersControl position="bottomright">
 					<LayersControl.BaseLayer checked name="OSM">
 						<TileLayer
@@ -192,7 +271,6 @@ export default function Map() {
 						/>
 					</LayersControl.BaseLayer>
 				</LayersControl>
-
 				{dataItem.map((list, index) => {
 					const icon = new L.Icon({
 						iconUrl: list.marker_icon,
