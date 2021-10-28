@@ -69,8 +69,8 @@ const institution = [
 
 export default function Map() {
 	const [selected, setSelected] = useState([]);
-	const [wardSelected, setWardSelected] = useState("All");
-	const [dataItem, setDataItem] = useState(data);
+	const [wardSelected, setWardSelected] = useState("");
+	const [dataItem, setDataItem] = useState([]);
 	const [trekkingSelected, setTrekkingSelected] = useState(false);
 	const [ringRoadSelected, setRingRoadSelected] = useState(false);
 
@@ -195,7 +195,12 @@ export default function Map() {
 						value={wardSelected}
 						onChange={onChangeWard}
 					>
-						<option value="All">All</option>
+						<option
+							value="कृपया वार्ड फिल्टर गर्नुहोस्"
+						>
+							कृपया वार्ड फिल्टर गर्नुहोस
+						</option>
+						<option value="All">सबै</option>
 						{[...Array(10)].map((ward, index) => (
 							<option key={index + 1} value={index + 1}>
 								{index + 1}
@@ -205,12 +210,12 @@ export default function Map() {
 				</div>
 
 				<div className="checkbox-content">
-					<span
+					{/* <span
 						onClick={() => handleTypeSelection("All")}
 						className={isActiveClass("All") ? "active" : ""}
 					>
 						All
-					</span>
+					</span> */}
 					{institution.map((value, index) => (
 						<span
 							key={index}
